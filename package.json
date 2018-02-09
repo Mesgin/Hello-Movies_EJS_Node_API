@@ -18,6 +18,8 @@
   "homepage": "https://github.com/Mesgin/assignment4#readme",
   "dependencies": {
     "ejs": "^2.5.7",
-    "express": "^4.16.2"
+    "express": "^4.16.2",
+    "node-sass": "^4.7.2",
+    "request": "^2.83.0"
   }
 }

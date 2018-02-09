@@ -1,16 +1,30 @@
 <html>
 
 <head>
-    <title>Home</title>
-    <link rel="stylesheet" href="/styles.css">
+    <title>Hello Movies</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="./styles.css">
 </head>
 
 <body>
-    <h1>Hello movies!</h1>
-    <%= movies.title %>
-
-    <%= movies.plot %>
-    
+    <div class="container-fluid text-center header">
+        <div class="container">
+            <a href="/">Hello movies</a>
+        </div>
+    </div>
+    <div class="container-fluid text-center movies">
+        <div class="row">
+            <form action='/search' method='GET' class="form-inline search-form">
+                <input name='searchTerm' class="form-control search-input" placeholder="Movie Title" />
+                <button type='submit' class="btn btn-warning">Search</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="container-fluid text-center">
+            <h2>Footer</h2>
+        </div>
+    </footer>
 </body>
 
 </html>
