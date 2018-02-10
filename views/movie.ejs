@@ -3,17 +3,17 @@
 <head>
     <title>Hello Movies</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link rel="stylesheet" type="text/css" href="./styles.css">
+    <link rel="stylesheet" type="text/css" href="./movie-styles.css">
 </head>
 
 <body>
     <div class="container-fluid text-center header">
         <div class="container">
-        <a href="/">Hello movies</a>
-        <form action='/search' method='GET' class="form-inline search-form">
-            <input name='searchTerm' class="form-control search-input" placeholder="Movie Title" />
-            <button type='submit' class="btn btn-warning">Search</button>
-        </form>
+            <a href="/">Hello movies</a>
+            <form action='/search' method='GET' class="form-inline search-form">
+                <input name='searchTerm' class="form-control search-input" placeholder="Movie Title" />
+                <button type='submit' class="btn btn-warning">Search</button>
+            </form>
         </div>
     </div>
     <div class="container-fluid text-center movies">
@@ -24,13 +24,11 @@
                         <%= dataObject.results[i].title %>
                             <%- "<small>( " + parseInt(dataObject.results[i].release_date) + " )</small>" %>
                     </h3>
-                    <!-- <p class="no-padding">
-                        
-                    </p> -->
                     <p class="no-padding">User Score:
                         <%= (dataObject.results[i].vote_average) * 10%>%
                     </p>
-                    <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2<%=dataObject.results[i].poster_path%>" class="movie-poster" />
+                        <img src="https://image.tmdb.org/t/p/w300_and_h450_bestv2<%=dataObject.results[i].poster_path%>" class="movie-poster"
+                        />
                 </div>
                 <% } %>
         </div>
